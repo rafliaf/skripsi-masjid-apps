@@ -1,0 +1,80 @@
+.custom-header {
+    text-align: center !important;
+    width: 80px !important;
+    padding-right: 7px !important;
+    /* Add more styles as needed */
+}
+
+.custom-cell {
+    text-align: center !important;
+    /* Add more styles as needed */
+}
+
+label{
+    padding-left: 10px !important;
+}
+
+.custom-padding{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+th{
+    background-color: #0B689C !important;
+    color: white !important;
+    font-size: 14px !important;
+}
+
+td{
+    font-size: 15px;
+}
+
+.icon-style-edit {
+    color: #FF7B00; 
+    cursor: pointer;
+}
+
+.icon-style-delete {
+    color: red; 
+    cursor: pointer;
+}
+
+/* icon alert */
+.custom-icon-alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%;
+    margin: 0 auto; /* Center the alert circle horizontally */
+}
+
+.custom-icon-alert .bi {
+    font-size: 7rem; /* Adjust the size as needed */
+    color: red; /* Color of the icon */
+}
+
+.center-col{
+    text-align: center !important;
+}
+
+.dt-column-order{
+    display: none !important;
+}
+
+/* Media Query for Mobile Devices */
+/* @media (max-width: 480px) {
+    .custom-padding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+} */
+
+/* Media Query for low resolution  Tablets, Ipads */
+/* @media (min-width: 481px) and (max-width: 767px) {
+    .custom-padding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+} */

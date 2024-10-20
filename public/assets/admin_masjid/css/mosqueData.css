@@ -1,0 +1,18 @@
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+.rounded-image {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Background color of the circle */
+    padding: 10px; /* Adjust the padding as needed */
+}
+
+td{
+    padding-top: 10px !important;
+}

@@ -1,0 +1,75 @@
+.center-content{
+    text-align: center !important;
+}
+
+.dt-input {
+    margin-right: 10px !important;
+}
+
+.custom-header {
+    text-align: center !important;
+    vertical-align: middle !important;
+    width: 80px !important;
+    padding-right: 7px !important;
+    /* Add more styles as needed */
+}
+
+.middle{
+    vertical-align: middle !important;
+}
+
+.custom-cell {
+    text-align: center !important;
+    /* Add more styles as needed */
+}
+
+thead{
+    background-color: #0B689C;
+    color: white;
+    font-size: 14px;
+}
+
+th {
+    vertical-align: middle !important;
+}
+
+td{
+    font-size: 14px;
+}
+
+.dt-column-order{
+    display: none !important;
+}
+.icon-style-detail{
+    color: #0B689C;
+    cursor: pointer;
+  }
+
+
+/* Filter style */
+.display-flex-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.custom-btn{
+    background-color: #0B689C;
+    border-color: #0B689C !important;
+}
+
+/* Media Query for Mobile Devices */
+/* @media (max-width: 480px) {
+    .custom-padding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+} */
+
+/* Media Query for low resolution  Tablets, Ipads */
+/* @media (min-width: 481px) and (max-width: 767px) {
+    .custom-padding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+} */

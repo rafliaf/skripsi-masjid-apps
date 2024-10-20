@@ -1,0 +1,102 @@
+.custom-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-card-title{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* jml warga */
+.custom-icon-users{
+    font-size: 45px;
+    color: #F9A825;
+}
+.user{
+    color: #F9A825;
+}
+
+
+/* data kk */
+.custom-icon-data-kk{
+    font-size: 45px;
+    color: #2e7ab8;
+}
+.user-data-kk{
+    color: #2e7ab8;
+}
+
+/* jml rumah */
+.custom-icon-jml-rumah{
+    font-size: 45px;
+    color: #b56328;
+}
+
+.jml-rumah{
+    color: #b56328;
+}
+
+.highcharts-credits{
+    display: none;
+}
+
+/* remaja masjid */
+.custom-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-card-title{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* jml warga */
+.custom-icon-users{
+    font-size: 45px;
+    color: #F9A825;
+}
+.user{
+    color: #F9A825;
+}
+
+
+/* data kk */
+.custom-icon-data-kk{
+    font-size: 45px;
+    color: #2eb830;
+}
+.user-data-kk{
+    color: #2eb830;
+}
+
+/* jml laki-laki */
+.custom-icon-jml-laki-laki{
+    font-size: 45px;
+    color: #1366cd;
+}
+
+.jml-laki-laki{
+    color: #1366cd;
+}
+
+.highcharts-credits{
+    display: none;
+}
+
+/* jml perempuan */
+.custom-icon-jml-perempuan{
+    font-size: 45px;
+    color: #cd13be;
+}
+
+.jml-perempuan{
+    color: #cd13be;
+}
+
+.highcharts-credits{
+    display: none;
+}

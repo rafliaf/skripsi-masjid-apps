@@ -1,0 +1,50 @@
+.custom-icon-alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%;
+    margin: 0 auto; /* Center the alert circle horizontally */
+}
+
+.custom-icon-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%;
+    margin: 0 auto; /* Center the alert circle horizontally */
+}
+
+.custom-icon-alert .bi {
+    font-size: 6rem; /* Adjust the size as needed */
+    color: #e7940e; /* Color of the icon */
+}
+
+.custom-icon-check{
+    font-size: 6rem; /* Adjust the size as needed */
+    color: #14a900; /* Color of the icon */
+}
+
+.custom-text{
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.custom-text-body{
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.custom-modal-content {
+    border-radius: 15px; /* Adjust the border-radius as needed */
+}
+
+.btn-warning{
+    font-weight:400;
+}

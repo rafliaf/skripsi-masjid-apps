@@ -1,0 +1,106 @@
+/* date picker */
+/* @import url("~air-datepicker/air-datepicker.css");  */
+
+.nav-link {
+    color: #000000;
+  }
+  .nav-link.active {
+    background-color: #007bff !important;
+    color: #fff !important;
+  }
+  .tab-content {
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-top: none;
+  }
+
+  .form-control:disabled, .form-control[readonly]{
+    background-color: white;
+  }
+
+  .center-content{
+    text-align: center !important;
+}
+
+.dt-input {
+    margin-right: 10px !important;
+}
+
+.custom-header {
+    text-align: center !important;
+    vertical-align: middle !important;
+    width: 80px !important;
+    padding-right: 7px !important;
+    /* Add more styles as needed */
+}
+
+.middle{
+    vertical-align: middle !important;
+}
+
+.custom-cell {
+    text-align: center !important;
+    /* Add more styles as needed */
+}
+
+th{
+    background-color: #0B689C !important;
+    color: white !important;
+    font-size: 14px !important;
+}
+
+tbody{
+  font-size: 14px;
+}
+
+.dt-column-order{
+    display: none !important;
+}
+
+.icon-style-edit {
+    color: #FF7B00; 
+    cursor: pointer;
+}
+
+.icon-style-detail{
+  color: #0B689C;
+  cursor: pointer;
+}
+
+.icon-style-delete {
+    color: red; 
+    cursor: pointer;
+}
+
+/* modal delete style */
+.custom-icon-alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%;
+    margin: 0 auto; /* Center the alert circle horizontally */
+}
+
+.custom-icon-alert .bi {
+    font-size: 7rem; /* Adjust the size as needed */
+    color: red; /* Color of the icon */
+}
+
+
+/* Media Query for Mobile Devices */
+/* @media (max-width: 480px) {
+    .custom-padding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+} */
+
+/* Media Query for low resolution  Tablets, Ipads */
+/* @media (min-width: 481px) and (max-width: 767px) {
+    .custom-padding{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+} */
