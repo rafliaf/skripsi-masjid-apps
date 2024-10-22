@@ -12,7 +12,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Tambah Data Induk</h1>
+                        <h1 class="m-0">Edit Data Induk</h1>
                         <p class="mt-2">{{ $getData->nama_masjid }}</p>
                     </div>
                     <div class="col-sm-6 mb-3">
@@ -45,7 +45,7 @@
                     <h3 class="p-3">Form User</h3>
                 </div> --}}
                 <div class="card">
-                    <h5 class="card-header">Form input data induk</h5>
+                    <h5 class="card-header">Form edit data induk</h5>
                     <div class="card-body">
                     <form action="{{ route('data_induk.update', $dataInduk->id) }}" method="POST">
                         @csrf

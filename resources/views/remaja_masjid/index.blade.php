@@ -30,8 +30,8 @@
             <div class="row">
                 {{-- jml anggota remaja masjid --}}
                 <div class="col-lg-3 col-sm-12">
-                    <div class="card">
-                        <div class="card-body" onclick="onClicked()">
+                    <div class="card card-custom">
+                        <div class="card-body body-custom" onclick="onClickJmlRemaja()">
                             <div class="custom-display">
                                 <div class="custom-icon-users">
                                     <i class="fas fa-briefcase"></i>
@@ -48,8 +48,8 @@
                 </div>
                 {{-- jml remaja --}}
                 <div class="col-lg-3 col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
+                    <div class="card card-custom">
+                        <div class="card-body body-custom" onclick="onClickJmlRemaja()">
                             <div class="custom-display">
                                 <div class="custom-icon-data-kk">
                                     <i class="fas fa-users"></i>                            
@@ -66,8 +66,8 @@
                 </div>
                 {{-- jml remaja laki-laki --}}
                 <div class="col-lg-3 col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
+                    <div class="card card-custom">
+                        <div class="card-body body-custom" onclick="onClickJmlRemaja()">
                             <div class="custom-display">
                                 <div class="custom-icon-jml-laki-laki">
                                     <i class="fas fa-male"></i>
@@ -84,8 +84,8 @@
                 </div>
                 {{-- jml perempuan --}}
                 <div class="col-lg-3 col-sm-12">
-                    <div class="card">
-                        <div class="card-body">
+                    <div class="card card-custom">
+                        <div class="card-body body-custom" onclick="onClickJmlRemaja()">
                             <div class="custom-display">
                                 <div class="custom-icon-jml-perempuan">
                                     <i class="fas fa-female"></i>
@@ -152,6 +152,11 @@
         window.countBacaHijaiyah = @json($countBacaHijaiyah);
         window.countBacaIqro = @json($countBacaIqro);
         window.countBacaQuran = @json($countBacaQuran);
+
+        // INFOBOX
+        function onClickJmlRemaja(){
+            window.location.href = "/dashboard/remaja_masjid";
+        }
     </script>
 
     {{-- Load external JavaScript file after Highcharts --}}

@@ -65,7 +65,7 @@
                         <div class="form-group row justify-content-center">
                             <label for="inputKeahlianLain" class="col-md-3 col-form-label">Keahlian lain</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="inputKeahlianLain" name="keahlian_lain" value="{{ $dataKeahlian->keahlian_lain }}">
+                                <input type="text" class="form-control" id="inputKeahlianLain" name="keahlian_lain" value="{{ $dataKeahlian->keahlian_lain ?? '-'}}">
                             </div>
                         </div>
                     

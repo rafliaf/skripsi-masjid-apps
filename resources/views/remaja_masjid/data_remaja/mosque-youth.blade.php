@@ -38,7 +38,7 @@
                             <div class="input-group">
                                 {{-- RT Filter --}}
                                 <select class="custom-select" id="inputRT">
-                                    <option value="" hidden>Pilih RT....</option>
+                                    <option value="" hidden>- Pilih -</option>
                                     @foreach($rtValues as $rt)
                                         <option value="{{ $rt }}" {{ request('rt') == $rt ? 'selected' : '' }}>{{ $rt }}</option>
                                     @endforeach
@@ -51,7 +51,7 @@
                             <div class="input-group">
                                 {{-- Kemampuan Baca Filter --}}
                                 <select class="custom-select" id="inputBaca">
-                                    <option value="" hidden>Pilih baca....</option>
+                                    <option value="" hidden>- Pilih -</option>
                                     <option value="alquran" {{ request('kemampuan_baca') == 'alquran' ? 'selected' : '' }}>Al-Qur'an</option>
                                     <option value="iqra" {{ request('kemampuan_baca') == 'iqra' ? 'selected' : '' }}>Iqra</option>
                                     <option value="hijaiyah" {{ request('kemampuan_baca') == 'hijaiyah' ? 'selected' : '' }}>Hijaiyah</option>
@@ -65,7 +65,7 @@
                             <div class="input-group">
                                 {{-- Remaja Masjid Filter --}}
                                 <select class="custom-select" id="inputRemaja">
-                                    <option value="" hidden>Pilih....</option>
+                                    <option value="" hidden>- Pilih -</option>
                                     <option value="ya" {{ request('remaja_masjid') == 'ya' ? 'selected' : '' }}>Ya</option>
                                     <option value="tidak" {{ request('remaja_masjid') == 'tidak' ? 'selected' : '' }}>Tidak</option>
                                 </select>

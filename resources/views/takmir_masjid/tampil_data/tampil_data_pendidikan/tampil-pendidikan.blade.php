@@ -86,10 +86,9 @@
                                 <tr>
                                     <th class="custom-header">No</th>
                                     <th>Nama</th>
-                                    <th style="text-align: left">No.telepon</th>
-                                    <th style="text-align: left">Kode KK</th>
                                     <th>Pendidikan</th>
                                     <th class="center-content">RT</th>
+                                    <th style="text-align: left">No.telepon</th>
                                     <th class="center-content">Aksi</th>
                                 </tr>
                             </thead>
@@ -98,10 +97,9 @@
                                     <tr>
                                         <td class="custom-cell">{{ $index + 1 }}</td>
                                         <td>{{ $dataPendidikan->nama_lengkap }}</td>
-                                        <td style="text-align: left">{{ $dataPendidikan->no_wa }}</td>
-                                        <td style="text-align: left">{{ $dataPendidikan->kartuKeluarga->nomor_kk }}</td>
                                         <td>{{ $dataPendidikan->pendidikan_name }}</td>
                                         <td class="center-content">{{ $dataPendidikan->kartuKeluarga->no_rt }}</td>
+                                        <td style="text-align: left">{{ $dataPendidikan->no_wa }}</td>
                                         <td style="text-align: center">
                                             <i class="fas fa-eye icon-style-detail mr-1" onclick="onDetailClicked({{ $dataPendidikan->id }})" data-toggle="tooltip" data-placement="top" title="Detail"></i>
                                         </td>

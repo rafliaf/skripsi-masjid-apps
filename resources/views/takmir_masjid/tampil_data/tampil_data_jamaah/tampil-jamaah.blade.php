@@ -77,7 +77,7 @@
                                 <tr>
                                     <th class="custom-header">No</th>
                                     <th>Nama</th>
-                                    <th class="center-content">Umur</th>
+                                    <th style="text-align: left">Umur</th>
                                     <th style="text-align: left">Status hubungan</th>
                                     <th class="center-content">Status mukim</th>
                                     <th class="center-content">Remaja masjid</th>
@@ -91,7 +91,7 @@
                                 <tr>
                                     <td class="custom-cell">{{ $index + 1 }}</td>
                                     <td>{{ $jamaahData->nama_lengkap ?? '-' }}</td>
-                                    <td class="center-content">{{ \Carbon\Carbon::parse($jamaahData->tgl_lahir)->age ?? '-' }}</td>
+                                    <td style="text-align: left">{{ \Carbon\Carbon::parse($jamaahData->tgl_lahir)->age ?? '-' }}</td>
                                     <td style="text-align: left">{{ $jamaahData->status_hubungan_keluarga }}</td>
                                     <td class="center-content">{{ ucfirst($jamaahData->is_status_mukim) }}</td>
                                     <td class="center-content">{{ ucfirst($jamaahData->is_remaja_masjid) }}</td>

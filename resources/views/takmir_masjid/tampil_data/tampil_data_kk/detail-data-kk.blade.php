@@ -72,7 +72,7 @@
                                 <tr class="col-md-12">
                                     <td class="custom-width-td" width="180px"><b>Keterangan</b></td>
                                     <td width="1%">:</td>
-                                    <td style="padding-left: 5px; text-align: justify">{{ $detailDataKK->keterangan }}</td>
+                                    <td style="padding-left: 5px; text-align: justify">{{ $detailDataKK->keterangan ?? '-' }}</td>
                                 </tr>
                             </thead>                            
                           </table>

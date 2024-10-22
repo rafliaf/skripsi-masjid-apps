@@ -32,8 +32,8 @@
                 <div class="row">
                     {{-- jml jamaah --}}
                     <div class="col-lg-4 col-sm-12">
-                        <div class="card">
-                            <div class="card-body" onclick="onClicked()">
+                        <div class="card card-custom">
+                            <div class="card-body body-custom" onclick="onClickJmlJamaah()">
                                 <div class="custom-display">
                                     <div class="custom-icon-users">
                                         <i class="fas fa-users"></i>                            
@@ -50,8 +50,8 @@
                     </div>
                     {{-- data kk --}}
                     <div class="col-lg-4 col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
+                        <div class="card card-custom">
+                            <div class="card-body body-custom" onclick="onClickJmlRumah()">
                                 <div class="custom-display">
                                     <div class="custom-icon-data-kk">
                                         <i class="fas fa-database"></i>                            
@@ -68,8 +68,8 @@
                     </div>
                     {{-- jml rumah --}}
                     <div class="col-lg-4 col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
+                        <div class="card card-custom">
+                            <div class="card-body body-custom" onclick="onClickJmlRumah()">
                                 <div class="custom-display">
                                     <div class="custom-icon-jml-rumah">
                                         <i class="fa fa-home"></i>                            
@@ -212,6 +212,15 @@
     // CHART PEKERJAAN
     var categoriesPekerjaan = @json($categories_pekerjaan);
     var dataPekerjaan = @json($data_pekerjaan);
+
+    // infobox
+    function onClickJmlJamaah(){
+        window.location.href = '/dashboard/tampil_data_jamaah'
+    }
+
+    function onClickJmlRumah(){
+        window.location.href = '/dashboard/tampil_data_kk'
+    }
 </script>
 
 <script src="{{ asset('assets/admin_masjid/js/home.js') }}"></script>

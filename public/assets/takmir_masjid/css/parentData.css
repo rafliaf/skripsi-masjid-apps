@@ -25,6 +25,10 @@ th{
     font-size: 15px !important;
 }
 
+td{
+    font-size: 15px !important;
+}
+
 .icon-style-edit {
     color: #FF7B00; 
     cursor: pointer;
