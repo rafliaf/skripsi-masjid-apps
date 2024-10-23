@@ -70,7 +70,7 @@
                                             <a href="{{ route('editDataKeahlian', $keahlian->id) }}" style="text-decoration: none">
                                                 <i class="fas fa-edit icon-style-edit mr-1" data-toggle="tooltip" data-placement="top" title="Edit"></i>
                                             </a>                                            
-                                            <i class="fas fa-trash-alt icon-style-delete" onclick="onDeleteClicked({{ $keahlian->id }})" data-toggle="tooltip" data-placement="top" title="Delete"></i>
+                                            <i class="fas fa-trash-alt icon-style-delete" onclick="onDeleteClicked({{ $keahlian->id }})" data-toggle="tooltip" data-placement="top" title="Hapus"></i>
                                         </td>
                                     </tr>
                                     @endforeach

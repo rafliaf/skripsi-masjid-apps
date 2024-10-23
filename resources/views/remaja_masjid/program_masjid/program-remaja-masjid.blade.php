@@ -67,7 +67,7 @@
                                         <td style="text-align: center">
                                             <i class="fas fa-edit icon-style-edit mr-1" onclick="onEditClicked({{ $program->id }})" data-toggle="tooltip" data-placement="top" title="Edit"></i>
                                             <i class="fas fa-eye icon-style-detail mr-1" onclick="onDetailClicked({{ $program->id }})" data-toggle="tooltip" data-placement="top" title="Detail"></i>
-                                            <i class="fas fa-trash-alt icon-style-delete" onclick="onDeleteClicked({{ $program->id }})" data-toggle="tooltip" data-placement="top" title="Delete"></i>
+                                            <i class="fas fa-trash-alt icon-style-delete" onclick="onDeleteClicked({{ $program->id }})" data-toggle="tooltip" data-placement="top" title="Hapus"></i>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -66,7 +66,7 @@
                                             <td style="text-align: left">{{ $induk->no_wa }}</td>
                                             <td style="text-align: center">
                                                 <i class="fas fa-edit icon-style-edit mr-1" onclick="onEditClicked({{ $induk->id }})" data-toggle="tooltip" data-placement="top" title="Edit"></i>
-                                                <i class="fas fa-trash-alt icon-style-delete" onclick="onDeleteClicked({{ $induk->id }})" data-toggle="tooltip" data-placement="top" title="Delete"></i>
+                                                <i class="fas fa-trash-alt icon-style-delete" onclick="onDeleteClicked({{ $induk->id }})" data-toggle="tooltip" data-placement="top" title="Hapus"></i>
                                             </td>
                                         </tr>
                                     @endforeach

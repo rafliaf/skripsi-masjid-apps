@@ -1,3 +1,3 @@
 function onClickLocationBack(){
-    window.history.back();
+    window.location.href = '/dashboard/data_user';
 }
