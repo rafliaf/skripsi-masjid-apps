@@ -125,7 +125,7 @@ class RemajaMasjidController extends Controller
         RemajaMasjid::create($validatedData);
     
         // Redirect with a success message
-        return redirect()->route('remajaMasjidIndex')->with('success', 'Data Remaja Masjid berhasil ditambahkan!');
+        return redirect()->route('remajaMasjidIndex')->with('success', 'Data remaja masjid berhasil ditambahkan!');
     }    
 
     // Edit Remaja Masjid data
@@ -143,7 +143,7 @@ class RemajaMasjidController extends Controller
         $remaja->update($validatedData);
     
         // Redirect back with a success message
-        return redirect()->route('remajaMasjidIndex')->with('success', 'Data Remaja Masjid berhasil diubah!');
+        return redirect()->route('remajaMasjidIndex')->with('success', 'Data remaja masjid berhasil diubah!');
     }
     
 
@@ -157,7 +157,7 @@ class RemajaMasjidController extends Controller
         $remaja->delete();
         
         // Redirect with a success message
-        return redirect()->route('remajaMasjidIndex')->with('success', 'Data Remaja Masjid berhasil dihapus!');
+        return redirect()->route('remajaMasjidIndex')->with('success', 'Data berhasil dihapus!');
     }
 
     // PROGRAM REMAJA MASJID
@@ -228,7 +228,7 @@ class RemajaMasjidController extends Controller
         ]);
 
         // Redirect back with success message
-        return redirect()->route('indexProgramRemaja')->with('success', 'Program successfully created!');
+        return redirect()->route('indexProgramRemaja')->with('success', 'Program berhasil ditambahkan!');
     }
 
 
@@ -282,7 +282,7 @@ class RemajaMasjidController extends Controller
         ]);
 
         // Redirect with success message
-        return redirect()->route('indexProgramRemaja')->with('success', 'Program updated successfully!');
+        return redirect()->route('indexProgramRemaja')->with('success', 'Program berhasil diperbarui!');
     }
 
 
@@ -314,7 +314,7 @@ class RemajaMasjidController extends Controller
         $program->delete();
     
         // Redirect back with a success message
-        return redirect()->route('indexProgramRemaja')->with('success', 'Program berhasil dihapus.');
+        return redirect()->route('indexProgramRemaja')->with('success', 'Program berhasil dihapus!');
     }
 
 }

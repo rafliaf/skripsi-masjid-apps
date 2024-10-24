@@ -79,7 +79,7 @@ class ProgramTakmirController extends Controller
         }
 
         // Redirect to another page after successful submission
-        return redirect()->route('index_program_takmir.index')->with('success', 'Jenis program masjid berhasil ditambahkan.');
+        return redirect()->route('index_program_takmir.index')->with('success', 'Jenis program berhasil ditambahkan');
     }
 
 
@@ -133,7 +133,7 @@ class ProgramTakmirController extends Controller
         ]);
 
         // Redirect dengan pesan sukses
-        return redirect()->route('index_program_takmir.index')->with('success', 'Program masjid berhasil ditambahkan.');
+        return redirect()->route('index_program_takmir.index')->with('success', 'Program takmir berhasil ditambahkan');
     }
 
 
@@ -190,7 +190,7 @@ class ProgramTakmirController extends Controller
         ]);
 
         // Redirect dengan pesan sukses
-        return redirect()->route('index_program_takmir.index')->with('success', 'Program masjid berhasil diperbarui.');
+        return redirect()->route('index_program_takmir.index')->with('success', 'Program takmir berhasil diperbarui');
     }
 
 
@@ -216,7 +216,7 @@ class ProgramTakmirController extends Controller
         $program->delete();
 
         // Redirect kembali dengan pesan sukses
-        return redirect()->route('index_program_takmir.index')->with('success', 'Program berhasil dihapus.');
+        return redirect()->route('index_program_takmir.index')->with('success', 'Program takmir berhasil dihapus');
     }
 
     

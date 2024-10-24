@@ -23,7 +23,7 @@ class DataProgramRemajaMasjid extends Migration
             $table->dateTime('tgl_mulai');
             $table->dateTime('tgl_selesai');
             $table->string('sasaran_kegiatan');
-            $table->string('catatan_pelaksanaan');
+            $table->string('catatan_pelaksanaan')->nullable();
             $table->timestamps();
         });
     }

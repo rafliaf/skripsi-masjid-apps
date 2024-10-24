@@ -85,7 +85,7 @@ class DataKeahlianController extends Controller
             ]);
         }
     
-        return redirect()->route('dataKeahlianIndex')->with('success', 'Jenis Keahlian created successfully!');
+        return redirect()->route('dataKeahlianIndex')->with('success', 'Jenis keahlian berhasil disimpan!');
     }
        
 
@@ -136,7 +136,7 @@ class DataKeahlianController extends Controller
         ]);
 
         // Redirect back with a success message
-        return redirect()->route('dataKeahlianIndex')->with('success', 'Data Keahlian created successfully!');
+        return redirect()->route('dataKeahlianIndex')->with('success', 'Data Keahlian berhasil disimpan!');
     }
 
     
@@ -187,7 +187,7 @@ class DataKeahlianController extends Controller
         $dataKeahlian->update($validatedData);
     
         // Redirect back with success message
-        return redirect()->route('dataKeahlianIndex')->with('success', 'Data Keahlian updated successfully!');
+        return redirect()->route('dataKeahlianIndex')->with('success', 'Data keahlian berhasil diperbarui!');
     }
     
     public function deleteDataKeahlian($id)
@@ -199,7 +199,7 @@ class DataKeahlianController extends Controller
         $dataKeahlian->delete();
     
         // Redirect back with a success message
-        return redirect()->route('dataKeahlianIndex')->with('success', 'Data Keahlian deleted successfully!');
+        return redirect()->route('dataKeahlianIndex')->with('success', 'Data berhasil dihapus!');
     }
     
 

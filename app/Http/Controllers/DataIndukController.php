@@ -162,7 +162,7 @@ class DataIndukController extends Controller
        $dataInduk->update($validatedData);
    
        // Redirect back with a success message
-       return redirect()->route('data_induk.index')->with('success', 'Data induk berhasil diupdate!');
+       return redirect()->route('data_induk.index')->with('success', 'Data induk berhasil diperbarui!');
    }
 
     //DELETE
