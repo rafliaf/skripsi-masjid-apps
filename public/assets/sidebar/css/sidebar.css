@@ -13,3 +13,12 @@
     height: 100% !important;
     /* overflow-y: auto !important; */
 }
+
+.info {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+}
+
+.image {
+    align-items: center !important;
+}
