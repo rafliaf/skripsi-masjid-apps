@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str; 
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
 
@@ -77,7 +77,8 @@ class UserController extends Controller
             $validatedUser['password'] = $user->password; // Copy the password from the authenticated user (or make it optional)
         } else {
             // For regular users, generate a random password
-            $validatedUser['password'] = Hash::make(Str::random(7));
+            // $validatedUser['password'] = Hash::make(Str::random(7));
+            $validatedUser['password'] = Hash::make('12345');
         }
 
         // Store the validated user data in the database
@@ -87,22 +88,22 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('success', 'Berhasil menambah data user!');
     }
 
-    
+
     public function editUserData(UpdateUserRequest $request)
     {
         // Find the user by ID
         $user = User::findOrFail($request->user_id);
-    
+
         // Validate the incoming request data
         $validatedData = $request->validate([
             'nama' => 'required|max:255|min:3',
             'email' => 'required|email:dns|unique:users,email,' . $user->id, // Allow the current user's email
             'role' => 'required|in:admin_masjid,takmir,remaja_masjid'
         ]);
-    
+
         // Update the user data
         $user->update($validatedData);
-    
+
         // Return back with a success message
         return back()->with('success', 'Data user berhasil diperbarui!');
     }
@@ -111,13 +112,11 @@ class UserController extends Controller
     {
         // Find the user by ID
         $user = User::findOrFail($id);
-    
+
         // Delete the user
         $user->delete();
-    
+
         // Redirect to /data_user with a success message
         return redirect()->route('user.index')->with('success', 'User berhasil dihapus!');
-    }     
-    
-     
+    }
 }
