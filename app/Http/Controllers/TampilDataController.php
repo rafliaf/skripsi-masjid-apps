@@ -21,7 +21,7 @@ class TampilDataController extends Controller
             ->select('data_masjid.nama_masjid')
             ->first();
     }
-        
+
     // data kk
     public function indexDataKK(Request $request)
     {
@@ -57,8 +57,8 @@ class TampilDataController extends Controller
 
         // Fetch distinct RT values for the current masjid
         $rtValues = DataKartuKeluarga::where('masjid_id', $masjidId)
-                    ->distinct()
-                    ->pluck('no_rt');
+            ->distinct()
+            ->pluck('no_rt');
 
         // Get the data_masjid using the helper function
         $getData = $this->getMasjidData($masjidId);
@@ -121,7 +121,8 @@ class TampilDataController extends Controller
 
 
     // detail data jamaah
-    public function detailDataJamaah($id){
+    public function detailDataJamaah($id)
+    {
         // Retrieve the specific data based on the provided id
         $jamaahData = DataInduk::findOrFail($id);
 
@@ -171,7 +172,8 @@ class TampilDataController extends Controller
 
 
     // detail data ibadah
-    public function detailDataIbadah($id){
+    public function detailDataIbadah($id)
+    {
         // Retrieve the specific data based on the provided id
         $ibadahData = DataInduk::findOrFail($id);
 
@@ -227,7 +229,8 @@ class TampilDataController extends Controller
 
 
     // detail data keahlian
-    public function detailDataKeahlian($id){
+    public function detailDataKeahlian($id)
+    {
         // Get the masjid_id of the currently logged-in user
         $masjidId = Auth::user()->masjid_id;
 
@@ -280,7 +283,8 @@ class TampilDataController extends Controller
 
 
     // detail data pekerjaan
-    public function detailDataPekerjaan($id){
+    public function detailDataPekerjaan($id)
+    {
         // Get the masjid_id of the currently logged-in user
         $masjidId = Auth::user()->masjid_id;
 
@@ -295,41 +299,43 @@ class TampilDataController extends Controller
     }
 
     // DATA PENDIDIKAN
-    public function indexDataPendidikan(Request $request){
+    public function indexDataPendidikan(Request $request)
+    {
         // Get the masjid_id of the currently logged-in user
         $masjidId = Auth::user()->masjid_id;
-    
+
         // Start building the query
         $query = DataInduk::where('masjid_id', $masjidId);
-    
+
         // Filter by RT if provided
         if ($request->has('rt') && !empty($request->rt)) {
             $query->whereHas('kartuKeluarga', function ($q) use ($request) {
                 $q->where('no_rt', $request->rt);
             });
         }
-    
+
         // Filter by Pendidikan if provided
         if ($request->has('pendidikan') && !empty($request->pendidikan)) {
             $query->where('pendidikan', $request->pendidikan);
         }
-    
+
         // Filter by Nama if provided
         if ($request->has('nama') && !empty($request->nama)) {
             $query->where('nama_lengkap', $request->nama);
         }
-    
+
         // Get the filtered data
         $dataPendidikan = $query->get();
-    
+
         // Get the masjid data
         $getData = $this->getMasjidData($masjidId);
-    
+
         return view('takmir_masjid.tampil_data.tampil_data_Pendidikan.tampil-Pendidikan', compact('getData', 'dataPendidikan'));
     }
-    
 
-    public function detailDataPendidikan($id){
+
+    public function detailDataPendidikan($id)
+    {
         // Get the masjid_id of the currently logged-in user
         $masjidId = Auth::user()->masjid_id;
 
@@ -377,7 +383,8 @@ class TampilDataController extends Controller
     }
 
 
-    public function detailDataKemampuan($id){
+    public function detailDataKemampuan($id)
+    {
         // Get the masjid_id of the currently logged-in user
         $masjidId = Auth::user()->masjid_id;
 

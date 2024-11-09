@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class DataKeahlian extends Model
 {
 
+    use HasFactory; // Tambahkan trait HasFactory
+
     protected $table = 'data_keahlian';
 
     protected $guarded = ['id'];
@@ -32,5 +34,4 @@ class DataKeahlian extends Model
     {
         return $this->belongsTo(DataInduk::class, 'data_induk_id');
     }
-
 }
