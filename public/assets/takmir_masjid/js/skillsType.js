@@ -10,7 +10,7 @@ $(document).ready(function () {
       inputCount++;
       const newInputGroup = `
       <div class="input-group row justify-content-center mt-4" id="inputGroup-${inputCount}">
-          <label for="inputNama-${inputCount}" class="col-md-3 col-form-label">Jenis keahlian ke-${inputCount}</label>
+          <label for="inputNama-${inputCount}" class="col-md-3 col-form-label">Keahlian ke-${inputCount}</label>
           <div class="col-sm-6">
               <input type="text" class="form-control margin-top-20" name="jenis_keahlian[]" id="inputNama-${inputCount}" placeholder="Jenis keahlian" required oninput="checkIfEmpty()">
           </div>

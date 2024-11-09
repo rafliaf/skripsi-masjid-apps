@@ -54,7 +54,6 @@
                                     <option value="">Semua data</option>
                                     <option value="1-3" {{ request('jumlah_anggota') == '1-3' ? 'selected' : '' }}>1-3</option>
                                     <option value="4-6" {{ request('jumlah_anggota') == '4-6' ? 'selected' : '' }}>4-6</option>
-                                    <option value="7+" {{ request('jumlah_anggota') == '7+' ? 'selected' : '' }}>7+</option>
                                 </select>
                             </div>
                         </div>

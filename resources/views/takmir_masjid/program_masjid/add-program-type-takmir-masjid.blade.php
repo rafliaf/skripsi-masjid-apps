@@ -40,7 +40,7 @@
                   </div>
                 @endif
                 <div class="card">
-                    <h5 class="card-header text-center">Jenis Program Masjid Al-Aqsa</h5>
+                    <h5 class="card-header text-center">Jenis Program {{ $getData->nama_masjid }}</h5>
                     <div class="mt-3 p-3 custom-icon">
                         <i class="fas fa-clipboard-list" style="font-size: 120px"></i>
                     </div>

@@ -53,7 +53,7 @@
                                         <th class="custom-header">No</th>
                                         <th>Nama lengkap</th>
                                         <th>Keahlian</th>
-                                        <th class="custom-col">Deskripsi keahlian</th>
+                                        <th class="custom-col">Keahlian lain</th>
                                         <th style="text-align: left">No. telepon</th>
                                         <th style="text-align: center">Aksi</th>
                                     </tr>
@@ -64,7 +64,7 @@
                                         <td class="custom-cell">{{ $index + 1 }}</td>
                                         <td>{{ $keahlian->dataInduk->nama_lengkap }}</td> <!-- Name from DataInduk -->
                                         <td>{{ $keahlian->jenisKeahlian->jenis_keahlian }}</td> <!-- Skill Type from MdDataKeahlian -->
-                                        <td class="custom-col">{{ $keahlian->deskripsi_keahlian ?? '-'}}</td>
+                                        <td class="custom-col">{{ $keahlian->keahlian_lain ?? '-'}}</td>
                                         <td style="text-align: left">{{ $keahlian->dataInduk->no_wa }}</td> <!-- Phone number from DataInduk -->
                                         <td style="text-align: center">
                                             <a href="{{ route('editDataKeahlian', $keahlian->id) }}" style="text-decoration: none">

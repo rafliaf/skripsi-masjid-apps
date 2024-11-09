@@ -10,16 +10,16 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Tambah Jenis Data Keahlian</h1>
+                        <h1 class="m-0">Tambah Data Keahlian</h1>
                         <p class="mt-2">{{ $getData->nama_masjid }}</p>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <a href="#">Jenis Data Keahlian</a>
+                                <a href="#">Data Keahlian</a>
                             </li>
                             <li class="breadcrumb-item active">
-                                Tambah jenis data keahlian
+                                Tambah data keahlian
                             </li>
                         </ol>
                     </div>
@@ -40,7 +40,7 @@
                   </div>
                 @endif
                 <div class="card mt-4">
-                    <h5 class="card-header text-center">Jenis Keahlian Jamaah Masjid {{ $getData->nama_masjid }}</h5>
+                    <h5 class="card-header text-center">Data Keahlian Jamaah Masjid {{ $getData->nama_masjid }}</h5>
                     <div class="mt-3 p-3 custom-icon">
                         <i class="fas fa-clipboard-list" style="font-size: 120px"></i>
                     </div>
@@ -50,7 +50,7 @@
                             <div class="form-group row justify-content-center" id="inputContainer">
                                 @if($jenisKeahlian->isEmpty())
                                     <div class="input-group row justify-content-center" id="inputGroup-1">
-                                        <label for="inputNama-1" class="col-md-3 col-form-label">Jenis keahlian ke-1</label>
+                                        <label for="inputNama-1" class="col-md-3 col-form-label">Keahlian ke-1</label>
                                         <div class="col-sm-6">
                                             <input type="text" class="form-control margin-top-20" name="jenis_keahlian[]" id="inputNama-1" placeholder="Jenis keahlian" required>
                                         </div>
@@ -66,7 +66,7 @@
                                 @else
                                 @foreach($jenisKeahlian as $index => $keahlian)
                                     <div class="input-group row justify-content-center mt-4" id="inputGroup-{{ $index + 1 }}">
-                                        <label for="inputNama-{{ $index + 1 }}" class="col-md-3 col-form-label">Jenis keahlian ke-{{ $index + 1 }}</label>
+                                        <label for="inputNama-{{ $index + 1 }}" class="col-md-3 col-form-label">Keahlian ke-{{ $index + 1 }}</label>
                                         <div class="col-sm-6">
                                             <input type="text" class="form-control margin-top-20" name="jenis_keahlian[]" id="inputNama-{{ $index + 1 }}" value="{{ $keahlian->jenis_keahlian }}" placeholder="Jenis keahlian" disabled>
                                         </div>

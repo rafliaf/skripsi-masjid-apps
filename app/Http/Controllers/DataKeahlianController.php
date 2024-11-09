@@ -76,7 +76,7 @@ class DataKeahlianController extends Controller
             }
         }
 
-        return redirect()->route('dataKeahlianIndex')->with('success', 'Jenis keahlian berhasil disimpan!');
+        return redirect()->route('dataKeahlianIndex')->with('success', 'Data keahlian berhasil disimpan!');
     }
     
     public function indexAddDataKeahlian()
