@@ -10,6 +10,6 @@ class DataKeahlianSeeder extends Seeder
     public function run()
     {
         // Buat data keahlian terkait data induk dan jenis keahlian
-        DataKeahlian::factory()->count(5)->create();
+        DataKeahlian::factory()->count(15)->create();
     }
 }

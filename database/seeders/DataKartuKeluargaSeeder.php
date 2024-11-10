@@ -16,7 +16,7 @@ class DataKartuKeluargaSeeder extends Seeder
     public function run()
     {
         // Masjid_id di-hardcode sebagai 1
-        $masjidId = 1;
+        $masjidId = 2;
 
         // Buat data dummy dengan masjid_id 1
         DataKartuKeluarga::factory()->count(20)->withMasjidId($masjidId)->create();

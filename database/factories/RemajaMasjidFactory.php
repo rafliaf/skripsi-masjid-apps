@@ -14,9 +14,9 @@ class RemajaMasjidFactory extends Factory
     public function definition()
     {
         return [
-            'masjid_id' => 1, // Hardcoded masjid_id
-            'data_induk_id' => DataInduk::inRandomOrder()->first()->id, // Relasi ke DataInduk
-            'kartu_keluarga_id' => DataKartuKeluarga::inRandomOrder()->first()->id, // Relasi ke DataKartuKeluarga
+            'masjid_id' => 2, // Hardcoded masjid_id
+            'data_induk_id' => $this->faker->randomElement(range(58, 98)), // Relasi ke DataInduk
+            'kartu_keluarga_id' => $this->faker->randomElement(range(21, 40)), // Relasi ke DataKartuKeluarga
             'is_remaja_masjid' => $this->faker->randomElement(['ya', 'tidak']), // Status remaja masjid
         ];
     }

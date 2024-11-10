@@ -2,15 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\ProgramTakmir;
-use App\Models\MdProgramTakmir;
-use App\Models\DataInduk;
+use App\Models\ProgramRemajaMasjid;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Carbon\Carbon;
 
-class ProgramTakmirFactory extends Factory
+class ProgramRemajaMasjidFactory extends Factory
 {
-    protected $model = ProgramTakmir::class;
+    protected $model = ProgramRemajaMasjid::class;
 
     /**
      * Define the model's default state.
@@ -19,13 +17,14 @@ class ProgramTakmirFactory extends Factory
      */
     public function definition()
     {
+
         // Set Faker to use Indonesian locale
         $this->faker->locale('id_ID');
 
         return [
-            'masjid_id' => 2,
-            'jenis_program_id' => $this->faker->randomElement(range(3, 4)),
-            'data_induk_id' =>  $this->faker->randomElement(range(58, 98)),
+            'masjid_id' => 1,
+            'jenis_program_id' => $this->faker->randomElement(range(1, 2)),
+            'data_induk_id' =>  $this->faker->randomElement(range(1, 54)),
             'nama_kegiatan' => $this->faker->sentence,
             'lokasi_kegiatan' => $this->faker->city . ', ' . $this->faker->state,
             'tgl_mulai' => Carbon::parse($this->faker->dateTimeBetween('-1 month', 'now'))->format('Y-m-d H:i:s'),

@@ -14,9 +14,9 @@ class DataKeahlianFactory extends Factory
     public function definition()
     {
         return [
-            'masjid_id' => 1, // Hardcoded masjid_id
-            'jenis_keahlian_id' => MdDataKeahlian::inRandomOrder()->first()->id,
-            'data_induk_id' => DataInduk::inRandomOrder()->first()->id,
+            'masjid_id' => 2, // Hardcoded masjid_id
+            'jenis_keahlian_id' => $this->faker->randomElement(range(4, 5)),
+            'data_induk_id' => $this->faker->randomElement(range(58, 98)),
             'keahlian_lain' => $this->faker->optional()->randomElement([
                 'Menjahit',
                 'Membordir',

@@ -1,14 +1,14 @@
-let table = new DataTable('#myTable', {
-  responsive: true
+let table = new DataTable("#myTable", {
+    responsive: true,
 });
 
 $(document).ready(function () {
-  let inputCount = $('#inputContainer .input-group').length || 1; // Start with the number of existing inputs or 1.
+    let inputCount = $("#inputContainer .input-group").length || 1; // Start with the number of existing inputs or 1.
 
-  // Function to add a new input field
-  window.onClickAdd = function () {
-      inputCount++;
-      const newInputGroup = `
+    // Function to add a new input field
+    window.onClickAdd = function () {
+        inputCount++;
+        const newInputGroup = `
       <div class="input-group row justify-content-center mt-4" id="inputGroup-${inputCount}">
           <label for="inputNama-${inputCount}" class="col-md-3 col-form-label">Keahlian ke-${inputCount}</label>
           <div class="col-sm-6">
@@ -23,64 +23,66 @@ $(document).ready(function () {
               </button>
           </div>
       </div>`;
-  
-      $('#inputContainer').append(newInputGroup);
-      updateButtons();
-      checkIfEmpty(); // Check inputs after adding a new one
-  };
 
-  // Function to remove an input field
-  window.onClickRemove = function (button) {
-      $(button).closest('.input-group').remove();
-      inputCount = $('#inputContainer .input-group').length; // Recalculate inputCount based on remaining inputs
-      updateLabels();
-      updateButtons();
-      checkIfEmpty(); // Check inputs after removing one
-  };
+        $("#inputContainer").append(newInputGroup);
+        updateButtons();
+        checkIfEmpty(); // Check inputs after adding a new one
+    };
 
-  // Function to check if all input fields are filled
-  window.checkIfEmpty = function () {
-      let allFilled = true;
+    // Function to remove an input field
+    window.onClickRemove = function (button) {
+        $(button).closest(".input-group").remove();
+        inputCount = $("#inputContainer .input-group").length; // Recalculate inputCount based on remaining inputs
+        updateLabels();
+        updateButtons();
+        checkIfEmpty(); // Check inputs after removing one
+    };
 
-      $('input[name="jenis_keahlian[]"]').each(function() {
-          if ($(this).val().trim() === '') {
-              allFilled = false;
-              return false; // Break out of the loop if an empty field is found
-          }
-      });
+    // Function to check if all input fields are filled
+    window.checkIfEmpty = function () {
+        let allFilled = true;
 
-      $('#addButton').prop('disabled', !allFilled); // Enable the button if all inputs are filled
-  };
+        $('input[name="jenis_keahlian[]"]').each(function () {
+            if ($(this).val().trim() === "") {
+                allFilled = false;
+                return false; // Break out of the loop if an empty field is found
+            }
+        });
 
-  // Function to update labels after adding/removing inputs
-  function updateLabels() {
-      $('#inputContainer .input-group').each(function (index) {
-          const currentIndex = index + 1;
-          $(this).attr('id', `inputGroup-${currentIndex}`);
-          $(this).find('label').attr('for', `inputNama-${currentIndex}`).text(`Jenis keahlian ke-${currentIndex}`);
-          $(this).find('input').attr('id', `inputNama-${currentIndex}`);
-      });
-  }
+        $("#addButton").prop("disabled", !allFilled); // Enable the button if all inputs are filled
+    };
 
-  // Function to update the visibility of add/remove buttons
-  function updateButtons() {
-      if (inputCount > 1) {
-          $('.btn-delete').show(); // Show delete buttons if more than one input
-      } else {
-          $('.btn-delete').hide(); // Hide delete buttons if only one input
-      }
-  }
+    // Function to update labels after adding/removing inputs
+    function updateLabels() {
+        $("#inputContainer .input-group").each(function (index) {
+            const currentIndex = index + 1;
+            $(this).attr("id", `inputGroup-${currentIndex}`);
+            $(this)
+                .find("label")
+                .attr("for", `inputNama-${currentIndex}`)
+                .text(`Keahlian ke-${currentIndex}`);
+            $(this).find("input").attr("id", `inputNama-${currentIndex}`);
+        });
+    }
 
-  // Initial call to update buttons and check if inputs are empty
-  updateButtons();
-  checkIfEmpty();
+    // Function to update the visibility of add/remove buttons
+    function updateButtons() {
+        if (inputCount > 1) {
+            $(".btn-delete").show(); // Show delete buttons if more than one input
+        } else {
+            $(".btn-delete").hide(); // Hide delete buttons if only one input
+        }
+    }
 
-  // Trigger input validation on all existing input fields when the page is ready
-  $('input[name="jenis_keahlian[]"]').on('input', checkIfEmpty);
+    // Initial call to update buttons and check if inputs are empty
+    updateButtons();
+    checkIfEmpty();
+
+    // Trigger input validation on all existing input fields when the page is ready
+    $('input[name="jenis_keahlian[]"]').on("input", checkIfEmpty);
 });
 
 // Function for navigating back to the previous page
-function onClickLocationBack(){
-    window.location.href = '/dashboard/data_keahlian'
+function onClickLocationBack() {
+    window.location.href = "/dashboard/data_keahlian";
 }
-

@@ -25,22 +25,24 @@ class DataIndukFactory extends Factory
         $faker = FakerFactory::create('id_ID');
 
         return [
-            'masjid_id' => 1,
+            'masjid_id' => 2,
             'kartu_keluarga_id' => $faker->numberBetween(1, 20), // Pastikan ID ini ada di data_kartu_keluarga
             'nik' => $faker->unique()->numerify('################'),
             'nama_lengkap' => $faker->name(),
             'status_hubungan_keluarga' => $faker->randomElement(['Kepala Keluarga', 'Istri', 'Anak', 'Orang Tua']),
             'tempat_lahir' => $faker->city(),
             'tgl_lahir' => $faker->date(),
-            'jenis_kelamin' => $faker->randomElement(['perempuan']),
-            'pendidikan' => $faker->randomElement(['belum_sekolah', 'paud', 'tk', 'sd', 'smp', 'smk', 'sma', 'd1', 'd2', 'd3', 'd4', 's1', 's2', 's3']),
+            'jenis_kelamin' => $faker->randomElement(['laki_laki']),
+            // 'pendidikan' => $faker->randomElement(['belum_sekolah', 'paud', 'tk', 'sd', 'smp', 'smk', 'sma', 'd1', 'd2', 'd3', 'd4', 's1', 's2', 's3']),
+            'pendidikan' => $faker->randomElement(['tk']),
             'pekerjaan' => $faker->randomElement([
                 'Belum Bekerja',
                 'Karyawan Honorer',
                 'Wiraswasta',
-                'Promotor Acara',
-                'Arsitek',
                 'Pedagang',
+                'Guru',
+                'Tukang las',
+                'Kuli bangunan'
             ]),
             'no_wa' => $faker->unique()->numerify('08##########'),
             'status_kawin' => $faker->randomElement(['menikah', 'belum_menikah', 'duda', 'janda']),

@@ -37,11 +37,11 @@ class ProgramTakmirController extends Controller
 
         // Get the data_masjid using the new method
         $getData = $this->getMasjidData($masjidId);
-    
+
         // Kirim flag $type_program_exists ke view
         return view('takmir_masjid.program_masjid.program-takmir-masjid', compact('type_program_exists', 'programs', 'getData'));
     }
-    
+
 
     public function indexAddJenisProgram()
     {
@@ -53,22 +53,22 @@ class ProgramTakmirController extends Controller
 
         // Get the data_masjid using the new method
         $getData = $this->getMasjidData($masjidId);
-    
+
         // Kirim data ke view
         return view('takmir_masjid.program_masjid.add-program-type-takmir-masjid', compact('jenis_programs', 'getData'));
     }
-    
+
 
     public function storeJenisProgram(Request $request)
     {
         // Validate the input
         $request->validate([
-            'jenis_program' => 'required|array|unique:md_program_takmir,jenis_program',
+            'jenis_program' => 'required|array',
             'jenis_program.*' => 'required|string|max:255',
         ]);
 
-         // Get the masjid_id of the currently logged-in user
-         $masjidId = auth()->user()->masjid_id;
+        // Get the masjid_id of the currently logged-in user
+        $masjidId = auth()->user()->masjid_id;
 
         // Loop through each input to store in the database
         foreach ($request->jenis_program as $jenisProgram) {
@@ -204,7 +204,7 @@ class ProgramTakmirController extends Controller
 
         // Ambil data program berdasarkan id
         $program = ProgramTakmir::findOrFail($id);
-    
+
         // Kirim data program ke view
         return view('takmir_masjid.program_masjid.detail-program-takmir-masjid', compact('program', 'getData'));
     }
@@ -218,6 +218,4 @@ class ProgramTakmirController extends Controller
         // Redirect kembali dengan pesan sukses
         return redirect()->route('index_program_takmir.index')->with('success', 'Program takmir berhasil dihapus');
     }
-
-    
 }

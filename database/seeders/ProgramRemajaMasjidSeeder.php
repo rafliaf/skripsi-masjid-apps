@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\ProgramRemajaMasjid;
 use Illuminate\Database\Seeder;
-use App\Models\ProgramTakmir;
 
-class ProgramTakmirSeeder extends Seeder
+class ProgramRemajaMasjidSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,6 @@ class ProgramTakmirSeeder extends Seeder
      */
     public function run()
     {
-        // Seed data_program_takmir
-        ProgramTakmir::factory(20)->create();
+        ProgramRemajaMasjid::factory()->count(10)->create();
     }
 }

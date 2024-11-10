@@ -18,8 +18,8 @@ class DataIndukSeeder extends Seeder
         // DataInduk::factory()->count(20)->create();
 
         DataInduk::factory()
-            ->count(4)
-            ->withTglLahir('2012-07-15') // Semua data menggunakan tanggal 2000-05-15
+            ->count(5)
+            ->withTglLahir('2019-05-11') // Semua data menggunakan tanggal 2000-05-15
             ->create();
     }
 }
